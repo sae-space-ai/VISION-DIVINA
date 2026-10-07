@@ -26,12 +26,12 @@ export default function App() {
         <Header />
 
         {/* Main Content Area */}
-        <div className="flex-1 flex gap-3 px-3 py-1 min-h-0">
+        <div className="flex-1 flex gap-3 px-3 py-1 min-h-0 overflow-hidden">
           {/* Left Panel */}
           <LeftPanel />
 
           {/* Center Map */}
-          <div className="flex-1 flex flex-col min-w-0">
+          <div className="flex-1 flex flex-col min-w-0 min-h-0">
             <MapCenter />
           </div>
 

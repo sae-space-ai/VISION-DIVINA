@@ -182,6 +182,12 @@ body {
 .leaflet-container {
   background: #050810 !important;
   border-radius: 8px;
+  font-family: inherit;
+}
+
+/* Dark filter for satellite imagery */
+.leaflet-tile-pane {
+  filter: brightness(0.7) contrast(1.2) saturate(0.8) hue-rotate(10deg);
 }
 
 .leaflet-control-attribution {
@@ -192,14 +198,41 @@ body {
   border: 1px solid rgba(0, 245, 255, 0.3) !important;
   border-radius: 4px !important;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.1) !important;
 }
 
 .leaflet-control-zoom a {
   background: rgba(5, 15, 35, 0.9) !important;
   color: #00f5ff !important;
   border-color: rgba(0, 245, 255, 0.2) !important;
+  width: 28px !important;
+  height: 28px !important;
+  line-height: 28px !important;
+  font-size: 14px !important;
 }
 
 .leaflet-control-zoom a:hover {
-  background: rgba(0, 245, 255, 0.1) !important;
+  background: rgba(0, 245, 255, 0.15) !important;
+}
+
+/* Tooltip styling */
+.leaflet-tooltip {
+  background: rgba(5, 15, 35, 0.9) !important;
+  border: 1px solid rgba(0, 245, 255, 0.3) !important;
+  color: #00f5ff !important;
+  font-family: monospace !important;
+  font-size: 10px !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.2) !important;
+}
+
+.leaflet-tooltip-top:before {
+  border-top-color: rgba(0, 245, 255, 0.3) !important;
+}
+
+/* Hide default Leaflet markers */
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+  display: none;
 }
